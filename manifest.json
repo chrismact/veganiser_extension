@@ -1,0 +1,14 @@
+{
+    "name": "Veganiser",
+    "action": {},
+    "manifest_version": 3,
+    "version": "0.1",
+    "description": "Turns milk into oat milk",
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ],
+    "background": {
+        "service_worker": "veganiser.js"
+    }
+}
