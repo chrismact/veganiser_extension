@@ -1,7 +1,9 @@
 const badToGood = {
   milk: "oat milk",
+  butter: "vegan butter",
+  egg: "flax egg",
+  mince: "soy mince",
 };
-// const badToGood = "milk";
 
 function run() {
   function replace(body, from, to) {
@@ -12,7 +14,10 @@ function run() {
       if (cont) body.textContent = cont.replace(from, to);
     }
   }
-  replace(document.body, new RegExp("milk", "gi"), "oat milk");
+
+  for (const [bad, good] of Object.entries(badToGood)) {
+    replace(document.body, new RegExp(bad, "gi"), good);
+  }
 }
 chrome.action.onClicked.addListener((tab) => {
   chrome.scripting.executeScript({
