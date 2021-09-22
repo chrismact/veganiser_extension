@@ -2,7 +2,7 @@ function run() {
   const badToGood = {
     milk: "oat milk",
     "egg ": "flax egg",
-    mince: "soy mince",
+    mince: "meat-free mince",
     "minced beef": "soy mince",
     chicken: "soy-based chicken alternative",
     lamb: "soy-based lamb alternative",
@@ -20,6 +20,7 @@ function run() {
     mozzarella: "vegan mozarella",
     dairy: "dairy-free",
     butter: "dairy-free butter",
+    bacon: "plant bacon",
   };
   function replace(body, from, to) {
     if (body.childNodes.length) {
